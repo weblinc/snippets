@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+#${1:NAME}.style-guide__subsection
+
+%h3= link_to_style_guide('${2:SECTION}', '${1/-/_/g}')
+
+%p ${3:DESCRIPTION}
+
+%p should ${4:UNIT TEST DESCRIPTION}:
+.style-guide__example-block
+  ${5:CODE EXAMPLE}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>weblinc-style-guide</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>text.haml</scope> -->
+</snippet>
