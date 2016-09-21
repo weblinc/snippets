@@ -2,13 +2,13 @@
   <content><![CDATA[
 #${1:NAME}.style-guide__subsection
 
-%h3= link_to_style_guide('${2:SECTION}', '${1/-/_/g}')
+  %h3= link_to_style_guide('${2:SECTION}', '${1/-/_/g}')
 
-%p ${3:DESCRIPTION}
+  %p ${3:DESCRIPTION}
 
-%p should ${4:UNIT TEST DESCRIPTION}:
-.style-guide__example-block
-  ${5:CODE EXAMPLE}
+  %p should ${4:UNIT TEST DESCRIPTION}:
+  .style-guide__example-block
+    ${5:CODE EXAMPLE}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>wl-style-guide</tabTrigger>
