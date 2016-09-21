@@ -12,7 +12,7 @@ Follow the links below to see what snippets we offer
 
 ## Installation
 
-### Sublime Text - OS X
+### Sublime Text 3 - OS X
 
 ```
 cd "~/Library/Application Support/Sublime Text 3/Packages/User"
