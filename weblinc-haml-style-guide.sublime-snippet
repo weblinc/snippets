@@ -8,7 +8,7 @@
 
   %p should ${4:UNIT TEST DESCRIPTION}:
   .style-guide__example-block
-    ${5:CODE EXAMPLE}
+    .${1:CODE EXAMPLE}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>wl-haml-style-guide</tabTrigger>
