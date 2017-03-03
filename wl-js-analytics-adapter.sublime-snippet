@@ -20,7 +20,7 @@ WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
             var scripts = _.toArray(document.scripts),
 
             loaded = _.any(scripts, function (script) {
-                return script.src.match(/{$3:someregexthatmatchesyour3rdpartyscript}/i);
+                return script.src.match(/${3:someregexthatmatchesyour3rdpartyscript}/i);
             });
 
             return loaded;
