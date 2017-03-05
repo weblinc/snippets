@@ -1,0 +1,117 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * @namespace WEBLINC.${1:adapterName}
+ */
+WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
+    'use strict';
+
+    var pageViewSent = false,
+
+        send = function (event, payload) {
+            if (WEBLINC.analytics.debug) {
+                console.log(arguments);
+            }
+
+            ${2://add your send logic here}
+        },
+
+        isLoaded = function () {
+            var scripts = _.toArray(document.scripts),
+
+            loaded = _.any(scripts, function (script) {
+                return script.src.match(/${3:someregexthatmatchesyour3rdpartyscript}/i);
+            });
+
+            return loaded;
+        },
+
+        tryPageView = function () {
+            if (pageViewSent) { return; }
+
+            if (isLoaded()) {
+                ${4://Fire page views here}
+                send('pageView', {});
+
+                WEBLINC.currentUser.gettingUserData.done(_.partial(addToCartEvent);
+
+                pageViewSent = true;
+            } else {
+                setTimeout(tryPageView, 500);
+                if (WEBLINC.analytics.debug) {
+                    console.log('WEBLINC.analytics: trying to send page view again');
+                }
+            }
+        },
+
+        addToCartEvent = function (payload, currentUser) {
+
+        };
+
+    // This is a good place to add any global objects for your integration, like dataLayers
+
+    return {
+        'pageView': tryPageView,
+
+        'categoryView': function (payload) {},
+
+        'searchResultsView': function (payload) {},
+
+        'productList': function (payload) {},
+
+        'productClick': function (payload) {},
+
+        'productQuickView': function (payload) {},
+
+        'productView': function (payload) {},
+
+        'addToCart': function (payload) {
+            //Example of using current_user data in analytics callbacks
+            WEBLINC.currentUser.gettingUserData.done(_.partial(addToCartEvent));
+        },
+
+        'cartView': function (payload) {},
+
+        'updateCartItem': function () {},
+
+        'removeFromCart': function (payload) {},
+
+        'checkoutLoginView': function (payload) {},
+
+        'checkoutLogin': function () {},
+
+        'checkoutGuest': function () {},
+
+        'checkoutAddressesView': function (payload) {},
+
+        'checkoutShippingView': function (payload) {},
+
+        'checkoutShippingMethodSelected': function (payload) {},
+
+        'checkoutPaymentView': function (payload) {},
+
+        'checkoutPaymentSelected': function (payload) {},
+
+        'checkoutOrderPlaced': function (payload) {},
+
+        'checkoutSignup': function () {},
+
+        'login': function () {},
+
+        'logout': function () {},
+
+        'forgotPassword': function () {},
+
+        'signup': function () {},
+
+        'share': function (payload) {},
+
+        'emailSignup': function () {}
+    };
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wl-js-analytics-adapter</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
