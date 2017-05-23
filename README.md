@@ -1,6 +1,6 @@
-# Weblinc Snippets
+# Workarea Snippets
 
-A collection of useful text-editor snippets for the WebLinc platform.
+A collection of useful text-editor snippets for the Workarea platform.
 
 
 ## Snippet Packages
@@ -23,9 +23,9 @@ git checkout sublime
 
 ## Branching
 
-The `sublime` branch contains snippets for the most recent version of WebLinc.
+The `sublime` branch contains snippets for the most recent version of Workarea.
 
-The `sublime-v2` branch contains snippts specific for any v2.x version of WebLinc.
+The `sublime-v2` branch contains snippts specific for any v2.x version of Workarea.
 
 
 ## Contributing
