@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[
 /**
- * @namespace WEBLINC.${1:adapterName}
+ * @namespace WORKAREA.${1:adapterName}
  */
-WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
+WORKAREA.analytics.registerAdapter('${1:adapterName}', function () {
     'use strict';
 
     var pageViewSent = false,
 
         send = function (event, payload) {
-            if (WEBLINC.analytics.debug) {
+            if (WORKAREA.analytics.debug) {
                 console.log(arguments);
             }
 
@@ -33,13 +33,13 @@ WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
                 ${4://Fire page views here}
                 send('pageView', {});
 
-                WEBLINC.currentUser.gettingUserData.done(_.partial(addToCartEvent);
+                WORKAREA.currentUser.gettingUserData.done(_.partial(addToCartEvent);
 
                 pageViewSent = true;
             } else {
                 setTimeout(tryPageView, 500);
-                if (WEBLINC.analytics.debug) {
-                    console.log('WEBLINC.analytics: trying to send page view again');
+                if (WORKAREA.analytics.debug) {
+                    console.log('WORKAREA.analytics: trying to send page view again');
                 }
             }
         },
@@ -67,7 +67,7 @@ WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
 
         'addToCart': function (payload) {
             //Example of using current_user data in analytics callbacks
-            WEBLINC.currentUser.gettingUserData.done(_.partial(addToCartEvent));
+            WORKAREA.currentUser.gettingUserData.done(_.partial(addToCartEvent));
         },
 
         'cartView': function (payload) {},
@@ -111,7 +111,7 @@ WEBLINC.analytics.registerAdapter('${1:adapterName}', function () {
 });
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>wl-js-analytics-adapter</tabTrigger>
+  <tabTrigger>wa-js-analytics-adapter</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <!-- <scope>source.python</scope> -->
 </snippet>

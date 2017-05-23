@@ -6,7 +6,7 @@ require 'pry'; binding.pry
 ###
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>wl-debugger</tabTrigger>
+  <tabTrigger>wa-debugger</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.ruby</scope>
 </snippet>
