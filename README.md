@@ -21,6 +21,12 @@ cd snippets
 git checkout sublime
 ```
 
+## Branching
+
+The `sublime` branch contains snippets for the most recent version of WebLinc.
+
+The `sublime-v2` branch contains snippts specific for any v2.x version of WebLinc.
+
 
 ## Contributing
 
